@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kalam:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, .container__form__botones,.container__form__nombreOid__input{
+ font-family: 'Kalam', Arial, Helvetica, sans-serif;
+}
+.bannerInicio{
+    background-color: #fab1a0;
+    display: flex;
+    padding: 0.5%;
+}
+.bannerInicio__titulo{
+    display: flex;
+    margin: 0 0 0 500px;
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
+}
+.bannerInicio__nav{
+    margin: 0 0 0 600px
+}
+.container__form{
+    display: flex;
+}
+.container__form__nombreOid{
+    font-size: 1.5em;
+}
+.container__form__nombreOid__input{
+    width: 345px;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+}
+.container__form__nombreOid__input::placeholder{
+    font-size: 1.5em;
+}
+.container__form__botones{
+    left: 0;
+    height: 50px;
+    border-radius: 20px;
+    padding: 14px 25px;
+    border: #fab1a0;
+}
+.container__form__botones:hover{
+    color: black!important;
+    box-shadow: 0 4px 16px #ffeaa7;
+    transition: all 0.2s ease;
+}
+.container__form__botones:active{
+    color:#fdcb6e;
+}
+.container__form__resultado{
+    border:2px #ff7675 solid;
+    width: auto;
+    height: auto;
+}
+
+
