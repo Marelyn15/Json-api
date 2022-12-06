@@ -45,7 +45,7 @@ function getPersona(){
      cuerpo.textContent = 'cuerpo : ';
      let cuerpoUser = document.createElement('p');
      cuerpoUser.textContent = persona.body;
-
+     let IdU = document.createElement('h4');
 
      let actions = document.createElement('h4');
      actions.textContent = 'Opciones: ';
@@ -53,8 +53,6 @@ function getPersona(){
      updateButton.textContent = 'Actualizar';
      let deleteButton = document.createElement('button');
      deleteButton.textContent = 'Borrar';
-
-     
 
      userId.classList.add('elementosAgregados');
      Id.classList.add('elementosAgregados');
