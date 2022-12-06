@@ -77,5 +77,5 @@ function showPersonas(persona){
 
 
 function deletContent(){
-    container.innerHTML = " ";
+    container.innerHTML = "";
 }

@@ -25,10 +25,14 @@ body, .container__form__botones,.container__form__nombreOid__input{
 .container__form{
     display: flex;
 }
+.container__form-2{
+    display: inline-block;
+    margin-top: 5%;
+}
 .container__form__nombreOid{
     font-size: 1.5em;
 }
-.container__form__nombreOid__input{
+.container__form__nombreOid__input, .container__form__datos-new__input{
     width: 345px;
     height: 50px;
     border-radius: 50px;
