@@ -1,33 +1,34 @@
-let borrarActualizacion = document.getElementById("borrar-2");
-borrarActualizacion.onclick = deletContent;
-
-let guardarActualizacion = document.getElementById("enviar-2");
-guardarActualizacion.onclick = actualizarUser;
+let guardarAct = document.getElementById("enviar-2");
+guardarAct.onclick = actualizarPersona;
 
 
+function actualizarPersona(){
 
+  let iDActual = document.getElementById("nombreOid__input1").value;
+  console.log(iDActual);
 
-function actualizarUser(){
- 
-    let newIdUser = document.getElementById('input-nombreOid1').value;
+  let newIdUser = document.getElementById('input-nombreOid1').value;
 
-    let newTitulo = document.getElementById('input-titulo1').value;
+  let newTitulo = document.getElementById('input-titulo1').value;
+
+  let newCuerpo3 = document.getElementById('input-cuerpo1').value;
   
-    let nuewcuerpo3 = document.getElementById('input-cuerpo1').value;
-
- const usuarioActualizado = {
-    title : newTitulo,
-    body: nuewcuerpo3,
-    userId: newIdUser
- }
- fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  const updateUser = {
+    title : newIdUser,
+    body: newTitulo,
+    userId: newCuerpo3
+  }
+  fetch(`https://jsonplaceholder.typicode.com/posts/${iDActual}`, {
   method: 'PUT',
-  body: JSON.stringify(usuarioActualizado),
+  body: JSON.stringify(updateUser),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
   .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then((json) => showNewData(json));
+}
 
+function showNewData(){
+  
 }

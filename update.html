@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar nuevo registro</title>
+    <title>Editar registro</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -16,17 +16,22 @@
             </ul>
         </nav>
     </header>
-    <h1>Editar Usuario</h1>
+    <h2>Editar Usuario</h2>
     <div class="container" id="container3">
         <div action="formulario" class="container__form-3" id="form">
+
+            <p class="container__form__nombreOid" id="nombreOid">Ingrese su ID actual: <input class="container__form__nombreOid__input" id="nombreOid__input1" type="text" placeholder="Nombre o ID" required></p>
             
-            <p class="container__form__datos-new" id="nuevoNombreId-nuevo" placeholder="Nombre o ID">Ingresa nuevo nombre o ID: <input type="text" class="container__form__datos-new__input" id="input-nombreOid1"></p>
+            <br>
+            <hr>
+
+            <p class="container__form__datos-new" id="nuevoNombreId-nuevo" placeholder="Nombre o ID">Ingresa nuevo nombre o ID user: <input type="text" class="container__form__datos-new__input" id="input-nombreOid1"></p>
            
             <p class="container__form__datos-new" id="nuevoTittle1" placeholder="tittle">Ingresa nuevo titulo: <input type="text" class="container__form__datos-new__input" id="input-titulo1"></p>
 
             <p class="container__form__datos-new" id="nuevoBody1" placeholder="cuerpo">Ingresa nuevo cuerpo: <input type="text" class="container__form__datos-new__input" id="input-cuerpo1"></p>
 
-            <button class="container__form__botones" id="enviar-2">Enviar</button>
+            <button class="container__form__botones" id="enviar-2">Guardar</button>
 
             <button class="container__form__botones" id="borrar-2">Borrar</button>
 
@@ -40,8 +45,9 @@
         </div>
     </div>
 
+    <script src="./js/updateusuario.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/nuevousuario.js"></script>
-    <script src="./js/updateusuario.js"></script>
+   
 </body>
 </html>

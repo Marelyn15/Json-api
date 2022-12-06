@@ -82,6 +82,7 @@ function showPersona2(newUser){
   container2.appendChild(deleteButton);
   
  }
+ 
  function deletContent(){
   container2.innerHTML = " ";
 }
