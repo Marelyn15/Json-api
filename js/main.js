@@ -46,12 +46,30 @@ function getPersona(){
      let cuerpoUser = document.createElement('p');
      cuerpoUser.textContent = persona.body;
 
+
+     let actions = document.createElement('h4');
+     actions.textContent = 'Opciones: ';
+     let updateButton = document.createElement('button');
+     updateButton.textContent = 'Actualizar';
+     let deleteButton = document.createElement('button');
+     deleteButton.textContent = 'Borrar';
+
+     
+
      userId.classList.add('elementosAgregados');
      Id.classList.add('elementosAgregados');
      titulo.classList.add('elementosAgregados');
      titleUser.classList.add('elementosAgregados');
      cuerpo.classList.add('elementosAgregados');
      cuerpoUser.classList.add('elementosAgregados');
+     actions.classList.add('elementosAgregados');
+
+
+     updateButton.classList.add('container__form__botones');
+     updateButton.setAttribute('id', 'actualizar');
+
+     deleteButton.classList.add('container__form__botones');
+     deleteButton.setAttribute('id', 'delete')
 
      
      container.appendChild(Id);
@@ -60,13 +78,27 @@ function getPersona(){
      container.appendChild(titleUser);
      container.appendChild(cuerpo);
      container.appendChild(cuerpoUser);
+     container.appendChild(actions);
+
+
+     container.appendChild(updateButton);
+     updateButton.onclick = redireccion;
+
+
+     container.appendChild(deleteButton);
+     
      
     }
 
 function showPersonas(persona){
     let cuerpo1 = '';
     for(let i = 0; i<persona.length; i++){
-        cuerpo1 += `<tr><td>${persona[i].id} <td>${persona[i].title}</td><td> ${persona[i].body}</td></tr>`;
+        cuerpo1 += `<tr><td>${persona[i].id} <td>
+        ${persona[i].title}</td>
+        <td> ${persona[i].body}</td>
+        <td> <a href="update.html"  id="nueva-actualizacion"><button value="Actualizar" class="container__form__botones">Actualizar</button></a></td>
+        <td><button class="container__form__botones" id="delete-4">Borrar</button></td>
+        </tr>`;
     }
     body.innerHTML = cuerpo1;
 
@@ -75,4 +107,8 @@ function showPersonas(persona){
 
 function deletContent(){
     container.innerHTML = "";
+}
+
+function redireccion(){
+    window.location.href="./update.html";
 }

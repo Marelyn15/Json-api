@@ -48,6 +48,13 @@ function showPersona2(newUser){
   let cuerpoUser = document.createElement('p');
   cuerpoUser.textContent = newUser.body;
 
+  let actions = document.createElement('h4');
+  actions.textContent = 'Opciones: ';
+  let updateButton = document.createElement('button');
+  updateButton.textContent = 'Actualizar';
+  let deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Borrar';
+
   userId.classList.add('elementosAgregados');
   Id.classList.add('elementosAgregados');
   titulo.classList.add('elementosAgregados');
@@ -56,12 +63,23 @@ function showPersona2(newUser){
   cuerpoUser.classList.add('elementosAgregados');
 
   
+  updateButton.classList.add('container__form__botones');
+  updateButton.setAttribute('id', 'actualizar');
+
+  deleteButton.classList.add('container__form__botones');
+  deleteButton.setAttribute('id', 'delete')
+  
   container2.appendChild(Id);
   container2.appendChild(userId);
   container2.appendChild(titulo);
   container2.appendChild(titleUser);
   container2.appendChild(cuerpo);
   container2.appendChild(cuerpoUser);
+
+  container2.appendChild(updateButton);
+  updateButton.onclick = redireccion;
+
+  container2.appendChild(deleteButton);
   
  }
  function deletContent(){
