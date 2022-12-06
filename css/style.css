@@ -61,5 +61,13 @@ body, .container__form__botones,.container__form__nombreOid__input{
     width: auto;
     height: auto;
 }
-
-
+.container__form__resultado__tabla{
+    border-collapse: collapse;
+}
+/* */
+.container__form__resultado__tabla,th,td{
+    border: #fab1a0 1px solid;
+}
+th, td{
+    padding: 5px;
+}

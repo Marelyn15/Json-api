@@ -27,11 +27,8 @@ function getPersona(){
         fetch(url)
         .then((response) => response.json())
         .then((data) => {showPersona(data)});
-    }
- 
- 
+        }
      }
-
  
     function showPersona(persona){
      deletContent();
