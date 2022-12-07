@@ -113,7 +113,7 @@ function borrarPersonas(){
 
     let idValue = document.getElementsByClassName("id");
     for(let i = 0; i<idValue.length; i++){
-        console.log(idValue[i]);
+        console.log(idValue[i].innerHTML);
     }
     
 
