@@ -89,14 +89,16 @@ function getPersona(){
      
     }
 
+    getPersona();
+
 function showPersonas(persona){
     let cuerpo1 = '';
     for(let i = 0; i<persona.length; i++){
-        cuerpo1 += `<tr class="elementosAgregados"><td class="id">${persona[i].id} <td>
+        cuerpo1 += `<tr class="filas"><td class="id">${persona[i].id} <td>
         ${persona[i].title}</td>
         <td> ${persona[i].body}</td>
         <td> <a href="update.html"  id="nueva-actualizacion"><button value="Actualizar" class="container__form__botones">Actualizar</button></a></td>
-        <td><button class="container__form__botones" id="delete-4" onclick="borrarPersonas()">Borrar</button></td>
+        <td><button class="container__form__botones" id="delete-4" onclick="borrarPersonas(${persona[i].id})">Borrar</button></td>
         </tr>`;
     }
     body.innerHTML = cuerpo1;
@@ -109,16 +111,18 @@ function deletContent(){
 function redireccion(){
     window.location.href="./update.html";
 }
-function borrarPersonas(){
+function borrarPersonas(iD){
+    console.log(iD);
+  let url = `https://jsonplaceholder.typicode.com/posts/${iD}`
+  fetch(url, {
+  method: 'DELETE',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: null
+})
 
-    let idValue = document.getElementsByClassName("id");
-    for(let i = 0; i<idValue.length; i++){
-        console.log(idValue[i].innerHTML);
-    }
-    
+.then(res=>res.json())
+.then(()=>location.reload())
 
-    /*
-    fetch('https://jsonplaceholder.typicode.com/posts/1', {
-    method: 'DELETE',
-    });*/
 }
